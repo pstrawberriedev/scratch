@@ -8,7 +8,7 @@ Personal Quickstart
 3. LESS
 4. jQuery
 4. Bootstrap Grid-Only
-5. GSAP TweenMax
+5. GSAP TweenMax, Draggable
 
 ### Requires
 1. Node
