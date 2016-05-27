@@ -1,6 +1,6 @@
 # Scratch
 
-Local Dev Quickstart
+Personal Quickstart
 
 ### Includes
 1. Express
@@ -9,7 +9,7 @@ Local Dev Quickstart
 4. jQuery
 4. Bootstrap Grid-Only
 5. GSAP TweenMax
-6. Flowtype
 
 ### Requires
-1. Node + NPM
+1. Node
+2. A browser ;]

@@ -13,6 +13,7 @@
 	font-weight: normal;
 	font-style: normal;
 }
+
 @font-face {
 	font-family: 'Roboto Regular';
 	src: url('../fonts/Roboto-Regular.eot');
@@ -20,6 +21,7 @@
 	font-weight: normal;
 	font-style: normal;
 }
+
 @font-face {
 	font-family: 'Roboto Medium';
 	src: url('../fonts/Roboto-Medium.eot');
@@ -29,31 +31,32 @@
 }
 
 // Font Stacks
-@bodyFont: 'Roboto Regular',Arial,Helvetica Neue,Helvetica,sans-serif;
-
-@thinFont: 'Roboto Thin',Arial,Helvetica Neue,Helvetica,sans-serif;
-
-@boldFont: 'Roboto Medium',Arial,Helvetica Neue,Helvetica,sans-serif;
+@font-default: 'Roboto Regular',Arial,Helvetica Neue,Helvetica,sans-serif;
+@font-thin: 'Roboto Thin',Arial,Helvetica Neue,Helvetica,sans-serif;
+@font-header: 'Roboto Medium',Arial,Helvetica Neue,Helvetica,sans-serif;
 
 // Sizes
-body {
-  font-size: 18px;
+html {
+  
+  font-size: 16px;
   line-height: 1.3;
-  font-family: @bodyFont;
-  font-weight:100;
-  color:#333; 
+  font-family: @font-default;
+  font-weight:normal;
+  color: @color-dark;
+  
 }
 
 h1,h2, h3,h4,h5,h6 {
-  font-family: @boldFont;
-  font-weight:500;
+  
+  font-family: @font-header;
+  font-weight:normal;
   text-align:center;
-    span {
-      font-family: @thinFont;
-    }
+  
+    span { font-family: @font-thin; }
+  
 }
 
-p {font-size:1.4em;}
+p {font-size:1em;}
 h1 { font-size: 4.3em; padding:.1em; }
 h2 { font-size: 3.3em; }
 h3 { font-size: 2.4em; }
@@ -61,10 +64,11 @@ h4 { font-size: 1.8em; }
 h5 { font-size: 1.2em; }
 
 
-// Font Colors
-@dark:#444;
-
-
 // Link Rules
 a, a:link, a:visited, a:hover, a:active {color:inherit;text-decoration:none;}
 a.link:hover {text-decoration:underline;}
+
+// Helpers
+.font-default {font-family:@font-default;}
+.font-thin {font-family:@font-thin;}
+.font-bold {font-family:@font-header;}

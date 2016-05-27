@@ -4,12 +4,13 @@
     <!-- Meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- Disable Zoom [hardcore] -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <!-- Title -->
     <title>
-      {{master.title}} {{#if page}} > {{page}}{{/if}}
+      {{global.title}} 
+      {{#if page}} | {{page}} {{/if}}
+       | {global.desc}}
     </title>
 
     <!-- CSS -->
@@ -21,11 +22,6 @@
   </head>
   
   <body>
-    
-    <!-- Header -->
-    <header role="main">
-      
-    </header>
     
     <!-- Navigation -->
     <nav role="main">

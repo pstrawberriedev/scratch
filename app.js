@@ -77,7 +77,7 @@ app.use('/', routes);
 // If no routes
 //~~~~~~~~~~~~~~~~~~~~~~~
 app.use(function(req, res, next) {
-  var err = new Error('Not Found wtfff');
+  var err = new Error('Page not found');
   err.status = 404;
   next(err);
 });
