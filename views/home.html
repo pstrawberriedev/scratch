@@ -10,7 +10,54 @@
     </header>
     
     <section class="text-center">
+      <h2>Summoner Lookup</h2>
+        
+        <!-- Summoner Lookup Form -->
+        <div class="lookup-region">
+          <span id="region-na">NA</span>
+          <span id="region-eu">EU</span>
+          <span id="region-kr">KR</span>
+        </div>
+        <form class="lookup-form" id="sumlookup" method="post" action="/">
+          
+          <label for="sumname"></label>
+          <input type="text" id="sumname" placeholder="Summoner name" />
+          <button type="submit">Go</button>
+          
+          <div class="loader-wrap">
+            <div class="loader">
+              <div class="wrap">
+                <div class="bar1"></div> 
+                <div class="bar2"></div> 
+                <div class="bar3"></div> 
+                <div class="bar4"></div> 
+                <div class="bar5"></div> 
+                <div class="bar6"></div> 
+                <div class="bar7"></div> 
+                <div class="bar8"></div>
+                <div class="bar7"></div> 
+                <div class="bar8"></div>
+                <div class="bar9"></div> 
+                <div class="bar10"></div>
+              </div>
+            </div>
+          </div>
+          
+        </form>
+        
+        <div class="text-center">
+          <span id="error"></span>
+        </div>
       
+        <div class="lookup-result">
+          
+          <h3 id="summoner-name"></h3>
+          <p>
+            <span id="summoner-level"></span>&nbsp;&nbsp;
+            <span id="summoner-id"></span>
+          </p>
+          
+        </div>
       
     </section>
 
