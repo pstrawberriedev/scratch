@@ -23,6 +23,7 @@ var lessMiddleware = require('less-middleware');
 // Require Routes
 //~~~~~~~~~~~~~~~~~~~~~~~
 var routes = require('./routes/index');
+var lol = require('./routes/lol');
 
 // Call Express
 //~~~~~~~~~~~~~~~~~~~~~~~
@@ -72,6 +73,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Do the routes
 //~~~~~~~~~~~~~~~~~~~~~~~
 app.use('/', routes);
+app.use('/lol', lol);
 
 
 // If no routes

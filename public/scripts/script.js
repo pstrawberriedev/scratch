@@ -72,6 +72,7 @@ summonerInput.on('submit', function(e) {
 
 
 // Summoner Lookup AJAX
+/*
 function summonerLookUp(summonerName) {
   
   var SUMMONER_NAME = summonerName;
@@ -116,3 +117,4 @@ function summonerLookUp(summonerName) {
     }
   });
 }
+*/
