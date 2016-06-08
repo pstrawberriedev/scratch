@@ -1,15 +1,16 @@
 # Scratch
 
-Personal Quickstart
+Node/Express Quickstart
 
 ### Includes
 1. Express
 2. Handlebars
 3. LESS
-4. jQuery
-4. Bootstrap Grid-Only
-5. GSAP TweenMax, Draggable
+4. Bootstrap (grid only)
+5. jQuery
+6. GSAP TweenMax, Draggable
 
 ### Requires
-1. Node
-2. A browser ;]
+1. A text editor
+2. Node
+3. A browser

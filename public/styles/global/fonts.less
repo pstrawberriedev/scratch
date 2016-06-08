@@ -5,7 +5,7 @@
 // Imports
 //@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300);
 
-// Local Fallbacks - Roboto
+// Local Roboto
 @font-face {
 	font-family: 'Roboto Thin';
 	src: url('../fonts/Roboto-Thin.eot');
@@ -33,7 +33,7 @@
 // Font Stacks
 @font-default: 'Roboto Regular',Arial,Helvetica Neue,Helvetica,sans-serif;
 @font-thin: 'Roboto Thin',Arial,Helvetica Neue,Helvetica,sans-serif;
-@font-header: 'Roboto Medium',Arial,Helvetica Neue,Helvetica,sans-serif;
+@font-bold: 'Roboto Medium',Arial,Helvetica Neue,Helvetica,sans-serif;
 
 // Sizes
 html {
@@ -48,29 +48,44 @@ html {
 
 h1,h2, h3,h4,h5,h6 {
   
-  font-family: @font-header;
+  font-family: @font-default;
   font-weight:normal;
-  text-align:center;
   
     span { font-family: @font-thin; }
   
 }
 
-p {font-size:1.1em;}
-h1 { font-size: 4.3em; padding:.1em; }
-h2 { font-size: 3.3em; }
-h3 { font-size: 2.4em; }
-h4 { font-size: 1.8em; }
-h5 { font-size: 1.2em; }
+p {font-size:1.1rem;}
+h1 { font-size: 4.3rem; }
+h2 { font-size: 3.3rem; }
+h3 { font-size: 2.4rem; }
+h4 { font-size: 1.8rem; }
+h5 { font-size: 1.2rem; }
 
 
-// Link Rules
+// Links
 a, a:link, a:visited, a:hover, a:active {color:inherit;text-decoration:none;}
 a.link:hover {text-decoration:underline;}
+
+
+// Lists
+ul li {
+  list-style-type:disc;
+}
+
+ol li {
+  list-style-type:decimal-leading-zero;
+}
+
+.padded-list {
+  li {
+    padding-left:.7rem;
+  }
+}
 
 // Helpers
 .font-default {font-family:@font-default;}
 .font-thin {font-family:@font-thin;}
-.font-bold {font-family:@font-header;}
+.font-bold {font-family:@font-bold;}
 
 .text-center {text-align:center;}

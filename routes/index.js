@@ -9,11 +9,23 @@ var global = {
   
 };
 
-/* GET home page. */
+/* GET home */
 router.get('/', function(req, res) {
 	
   
   res.render('home', { 
+    page: 'Home',
+    global: global
+  });
+  
+  
+});
+
+/* GET page */
+router.get('/page', function(req, res) {
+	
+  
+  res.render('content/page', { 
     page: 'Home',
     global: global
   });
