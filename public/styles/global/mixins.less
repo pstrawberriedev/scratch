@@ -43,6 +43,19 @@
 	-moz-border-top-right-radius: @border-top-right-radius;
 	border-top-right-radius: @border-top-right-radius;
 }
+.animation(@arguments) {
+	-webkit-animation: @arguments;
+	-moz-animation: @arguments;
+    -ms-animation: @arguments;
+     -o-animation: @arguments;
+	animation: @arguments;
+}
+.keyframes(@name; @arguments) {
+	@-moz-keyframes @name { @arguments(); }
+	@-webkit-keyframes @name { @arguments(); }
+    @-o-keyframes @name { @arguments(); }
+	@keyframes @name { @arguments(); }
+}
 .transition(@transition) {
 	-webkit-transition:@transition;
 	-moz-transition:@transition;
@@ -53,6 +66,12 @@
   -ms-transform:@transform;
   -webkit-transform:@transform;
   transform:@transform;
+}
+.transition-transform(@transition) {
+    -webkit-transition: -webkit-transform @transition;
+    -moz-transition: -moz-transform @transition;
+    -o-transition: -o-transform @transition;
+    transition: transform @transition;
 }
 .box-shadow (@box-shadow) {
 	-webkit-box-shadow: @box-shadow;
@@ -79,4 +98,20 @@
     -moz-box-sizing: @box-sizing;
     -webkit-box-sizing: @box-sizing;
     box-sizing: @box-sizing;
+}
+.gradient (@startColor: #000, @endColor: white) {
+	background-color: @startColor;
+	background: -webkit-gradient(linear, left top, left bottom, from(@startColor), to(@endColor));
+	background: -webkit-linear-gradient(top, @startColor, @endColor);
+	background: -moz-linear-gradient(top, @startColor, @endColor);
+	background: -ms-linear-gradient(top, @startColor, @endColor);
+	background: -o-linear-gradient(top, @startColor, @endColor);
+}
+.horizontal-gradient (@startColor: #000, @endColor: white) {
+ 	background-color: @startColor;
+	background-image: -webkit-gradient(linear, left top, right top, from(@startColor), to(@endColor));
+	background-image: -webkit-linear-gradient(left, @startColor, @endColor);
+	background-image: -moz-linear-gradient(left, @startColor, @endColor);
+	background-image: -ms-linear-gradient(left, @startColor, @endColor);
+	background-image: -o-linear-gradient(left, @startColor, @endColor);
 }
