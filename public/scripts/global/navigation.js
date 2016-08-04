@@ -3,6 +3,9 @@
 */
 console.log('--> navigation.js');
 
+var $pageOverlay = $('#page-overlay');
+var bodyOverlayClass = 'overlay-active';
+
 var $hamburger = $('#mobile-menu');
 var $mobileFixed = $('.nav-mobile');
 var $mobileNav = $('#nav-mobile-menu');
@@ -52,9 +55,24 @@ $(document).ready(function() {
   // Close mobile nav
   closeNav();
 
-
 });
 
+
+// Control Page Overlays
+//
+function showPageOverlay() {
+    $pageOverlay.show();
+    TweenLite.to($pageOverlay, .35, { autoAlpha: 1, zIndex:800, ease: Power1.easeInOut });
+    TweenLite.to($('main#main-content'), .22, { x:'17px', ease: Power1.easeInOut });
+  $('body').addClass(bodyOverlayClass);
+}
+
+function hidePageOverlay() {
+    TweenLite.to($pageOverlay, .35, { autoAlpha: 0, zIndex: '-2', ease: Power1.easeInOut});
+  TweenLite.to($('main#main-content'), .22, { x:0, ease: Power1.easeInOut });
+  $('body').removeClass(bodyOverlayClass);
+  $pageOverlay.hide();
+}
 
 // Hamburger to X
 //
@@ -87,6 +105,7 @@ function closeNav() {
 
   //default
   doTheHammy('close');
+  hidePageOverlay();
   TweenLite.to($mobileNav, .3, { x: "-300px", autoAlpha:0, ease: Power1.easeOut })
   $hamburger.removeClass('active');
   $mobileNav.attr("aria-hidden","true");
@@ -100,6 +119,7 @@ function closeNav() {
 function openNav() {
 
   doTheHammy('open');
+  showPageOverlay();
   TweenLite.to($mobileNav, .25, { x: 0, autoAlpha:1, ease: Power1.easeOut })
   $hamburger.addClass('active');
   $mobileNav.attr("aria-hidden","false");
@@ -108,8 +128,10 @@ function openNav() {
 
 // Hamburger Click Event
 //
-$hamburger.on('click', function() {
+$hamburger.on('click', function(e) {
 
+  e.preventDefault();
+  
   // Default Action
   if(! $hamburger.hasClass('active')) {
     openNav();
