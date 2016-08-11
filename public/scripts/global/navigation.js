@@ -77,7 +77,7 @@ function hidePageOverlay() {
 // Hamburger to X
 //
 function doTheHammy(option) {
-
+  
     // Elements
     var $trigger = $hamburger;
     var $first = $trigger.find('.hammy-special .fir');
@@ -106,7 +106,7 @@ function closeNav() {
   //default
   doTheHammy('close');
   hidePageOverlay();
-  TweenLite.to($mobileNav, .3, { x: "-300px", autoAlpha:0, ease: Power1.easeOut })
+  TweenLite.to($mobileNav, .3, { x: "-300px", ease: Power1.easeOut })
   $hamburger.removeClass('active');
   $mobileNav.attr("aria-hidden","true");
   //close submenus
@@ -120,7 +120,7 @@ function openNav() {
 
   doTheHammy('open');
   showPageOverlay();
-  TweenLite.to($mobileNav, .25, { x: 0, autoAlpha:1, ease: Power1.easeOut })
+  TweenLite.to($mobileNav, .25, { x: 0, ease: Power1.easeOut })
   $hamburger.addClass('active');
   $mobileNav.attr("aria-hidden","false");
 
@@ -129,7 +129,7 @@ function openNav() {
 // Hamburger Click Event
 //
 $hamburger.on('click', function(e) {
-
+  TweenLite.set($mobileNav, { autoAlpha: 1 });
   e.preventDefault();
   
   // Default Action
@@ -176,6 +176,7 @@ Draggable.create($mobileNav, {
         var link = jqueryEvent.find('a')[0];
 
         link.click();
+        return;
 
       }
 
