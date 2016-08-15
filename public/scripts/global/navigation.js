@@ -157,8 +157,9 @@ $hamburger.on('click', function(e) {
 
 });
 
-// GSAP Draggable Mobile Instance
+// GSAP Draggable Mobile Instance -  still not quite there =/
 //
+/*
 Draggable.create($mobileNav, {
 
   type:"x",
@@ -190,7 +191,7 @@ Draggable.create($mobileNav, {
       }
     }
 
-});
+});*/
 
 // Mobile Submenus
 //
